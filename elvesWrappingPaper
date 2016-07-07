@@ -1,0 +1,21 @@
+var testInput = "20x3x4";
+var testInputLength = testInput.length;
+var lwh = ["", "", ""];
+var lwhIndex = 0;
+
+function isNumber(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+
+for (var i = 0; i < testInputLength; i++) {
+  if (testInput[i] == "x") {
+    lwhIndex++;
+  }
+  else if(isNumber(testInput[i])) {
+    lwh[lwhIndex] += testInput[i];
+  }
+}
+alert(lwh);
+
+
